@@ -124,7 +124,7 @@ developing applications that use %{name} C++ bindings.
 sed -i -e 's/ENV{ID_SIGROK}="1"/TAG+="uaccess"/g' contrib/60-libsigrok.rules
 
 %build
-slibtoolize --copy --force
+libtoolize --copy --force
 autoreconf -fvi
 %configure \
 	CPPFLAGS=-I/usr/include/tirpc LDFLAGS=-ltirpc \
