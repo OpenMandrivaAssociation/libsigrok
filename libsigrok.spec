@@ -34,6 +34,7 @@ Source0:	%{name}-%{sourcedate}-%{gitcommit}.tar.zst
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
+BuildRequires:	libtool
 BuildRequires:	slibtool
 BuildRequires:	doxygen
 BuildRequires:	graphviz
