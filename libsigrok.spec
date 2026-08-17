@@ -133,7 +133,7 @@ autoreconf -fvi
 	%{!?with_python:--disable-python} \
 	%{!?with_ruby:--disable-ruby} \
 	%{!?with_static:--disable-static}
-%make_build
+%make_build LIBTOOL=/usr/bin/libtool
 
 %install
 %make_install
