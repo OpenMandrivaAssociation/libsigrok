@@ -136,7 +136,7 @@ autoreconf -fvi
 %make_build LIBTOOL=/usr/bin/libtool
 
 %install
-%make_install
+%make_install LIBTOOL=/usr/bin/libtool
 
 find %{buildroot} -type f -name "*.la" -delete -print
 
