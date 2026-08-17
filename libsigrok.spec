@@ -31,7 +31,10 @@ Source0:	%{name}-%{sourcedate}-%{gitcommit}.tar.zst
 # Alternative GH source
 #Source0:	https://github.com/sigrokproject/libsigrok/archive/%%{version}/%%{name}-%%{version}.tar.gz
 
-BuildRequires:	autoconf automake slibtool
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	doxygen
 BuildRequires:	graphviz
 BuildRequires:	hicolor-icon-theme
@@ -121,6 +124,7 @@ developing applications that use %{name} C++ bindings.
 sed -i -e 's/ENV{ID_SIGROK}="1"/TAG+="uaccess"/g' contrib/60-libsigrok.rules
 
 %build
+slibtoolize --copy --force
 autoreconf -fvi
 %configure \
 	CPPFLAGS=-I/usr/include/tirpc LDFLAGS=-ltirpc \
