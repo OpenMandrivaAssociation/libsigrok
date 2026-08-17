@@ -21,7 +21,7 @@
 
 Name:		libsigrok
 Version:	0.6.0+git%{sourcedate}.%{gitcommit}
-Release:	1
+Release:	2
 Summary:	libsigrok is a shared library which provides hardware access drivers for logic analyzers, oscilloscopes, multimeters, and more
 URL:		https://sigrok.org
 License:	GPL-3.0-or-later
